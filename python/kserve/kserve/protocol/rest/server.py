@@ -97,7 +97,7 @@ class RESTServer:
                              v2_endpoints.model_metadata, tags=["V2"], include_in_schema=False),
                 FastAPIRoute(r"/v2/models/{model_name}/ready",
                              v2_endpoints.model_ready, response_model=ModelReadyResponse, tags=["V2"]),
-                FastAPIRoute(r"v2/models/{model_name}/versions/{model_version}/ready",
+                FastAPIRoute(r"/v2/models/{model_name}/versions/{model_version}/ready",
                              v2_endpoints.model_ready, response_model=ModelReadyResponse, tags=["V2"]),
                 FastAPIRoute(r"/v2/models/{model_name}/infer",
                              v2_endpoints.infer, methods=["POST"], response_model=InferenceResponse, tags=["V2"]),
